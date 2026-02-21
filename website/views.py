@@ -4,23 +4,12 @@ from django.http import HttpResponse
 
 
 def about_view(request):
-    return HttpResponse("""
-                 <h1>hello welcome to our website</h1>
-                 <br>
-                 <h2>about us : </h2>
-                 """)
+    return render(request, "website/about-us.html")
 
 
 def home_view(request):
-    return HttpResponse("""
-                 <h1>hello welcome to our website</h1>
-                 <br>
-                 <h2>hello home !!!</h2>
-                 """)
+    return render(request, "website/homepage.html")
 
 def contact_view(request):
-    return HttpResponse("""
-                 <h1>hello welcome to our website</h1>
-                 <br>
-                 <h2>contact with us</h2>
-                 """)
+    return render(request, "website/contact.html")
+
